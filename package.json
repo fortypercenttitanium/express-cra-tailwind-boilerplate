@@ -1,0 +1,21 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "DESCRIPTION",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm i && cd client && npm i && cd ../server && npm i",
+    "start": "cd client && npm run build && node ../server/bin/www",
+    "server": "nodemon server/bin/www",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Alex Younger",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
